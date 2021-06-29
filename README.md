@@ -12,3 +12,5 @@ Bypass multiple pages in Indonesian News to single page using Universal Bypass
 1. Install Universal Bypass [https://universal-bypass.org/install](https://universal-bypass.org/install)
 2. Add `injection.js` to Custom Bypasses
 3. Done
+
+## N.B : Use [Ublock Origin](https://github.com/gorhill/uBlock/releases) and custom filter (not released yet) for comfortable reading
