@@ -2,7 +2,7 @@
 Bypass multiple pages in Indonesian News to single page using Universal Bypass
 
 ### Only support :
-* tribunnews.com (I will include regional site news in future)
+* tribunnews.com (I will include regional site news and subdomain in future like [manado.tribunnews.com](manado.tribunnews.com), [style.tribunnews.com](style.tribunnews.com)
 * kompas.com
 
 ### How to use?
