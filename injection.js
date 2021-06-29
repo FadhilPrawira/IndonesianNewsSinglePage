@@ -1,13 +1,23 @@
 // TRIBUNNEWS.COM
 // Some examples of what you can do with custom bypasses:
-domainBypass("tribunnews.com", () => {
+
+tribun = window.location.hostname.match("^[^.]*")[0].concat(".tribunnews.com");
+
+domainBypass(tribun, () => {
 	// Triggered on example.com and subdomains (e.g. www.example.com)
 	ensureDomLoaded(() => {
 		// Triggered as soon as the DOM is ready
-	
+	console.log("helooooo");
 	})
-  pattern = "(^https://([a-z]*)[.]tribunnews.com[/]([a-z]*)/)((?:19|20)\\d\\d)/(0?[1-9]|1[012])/([12][0-9]|3[01]|0?[1-9])[/]"
-  // Regex pattern
+  pattern = "(^https://([a-z]*)[.]tribunnews.com[/]([a-z]*)/)((?:19|20)\\d\\d)/(0?[1-9]|1[012])/([12][0-9]|3[01]|0?[1-9])[/]";
+  // Regex pattern for normal tribunnews
+  // https://subdomain.tribunnews.com/newsPath/yyyy/mm/dd/my-news?page=all
+  
+  patternStyle = "(^https://([a-z]*)[.]tribunnews.com[/])((?:19|20)\\d\\d)/(0?[1-9]|1[012])/([12][0-9]|3[01]|0?[1-9])[/]";
+  // Regex pattern for style.tribunnews.com or other abnormal link
+  // https://subdomain.tribunnews.com/yyyy/mm/dd/my-news?page=all
+  
+  //tribunAbnormal = window.location.href.includes(window.location.href.match(patternStyle)[0]);
   if(window.location.href.includes(window.location.href.match(pattern)[0])) {
     if(!window.location.href.includes("?page=all")){
       // If the url didn't have "?page=all" in the end of url, do this
